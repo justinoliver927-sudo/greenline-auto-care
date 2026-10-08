@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GreenLine Auto Care</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7f5;
+            color: #172117;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #123d25;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 28px;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 8px;
+            font-size: 14px;
+        }
+
+        .hero {
+            background: #1f6b3a;
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .hero h2 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            background: white;
+            color: #176333;
+            padding: 13px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 45px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #14552e;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 18px;
+        }
+
+        .service {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .service h3 {
+            margin-bottom: 8px;
+        }
+
+        .price {
+            color: #1f6b3a;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .contact {
+            text-align: center;
+            background: #e5f0e7;
+        }
+
+        .whatsapp {
+            display: inline-block;
+            margin-top: 15px;
+            background: #25D366;
+            color: white;
+            padding: 14px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #123d25;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>GreenLine Auto Care</h1>
+
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Clean Car. Fresh Feeling.</h2>
+    <p>Professional car washing and detailing in Boksburg.</p>
+
+    <a class="button" href="#contact">Book a Wash</a>
+</section>
+
+<section id="services">
+    <h2>Our Services</h2>
+
+    <div class="services">
+
+        <div class="service">
+            <h3>Basic Wash</h3>
+            <p>A clean exterior wash for your vehicle.</p>
+            <p class="price">R60</p>
+        </div>
+
+        <div class="service">
+            <h3>Wash + Vacuum</h3>
+            <p>Exterior wash plus interior vacuum.</p>
+            <p class="price">R100</p>
+        </div>
+
+        <div class="service">
+            <h3>Full Detail</h3>
+            <p>A complete clean inside and outside.</p>
+            <p class="price">R250</p>
+        </div>
+
+        <div class="service">
+            <h3>Tyre Shine</h3>
+            <p>Give your tyres a fresh finished look.</p>
+            <p class="price">R30</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="about">
+    <h2>About GreenLine</h2>
+
+    <p style="text-align:center;">
+        GreenLine Auto Care is a local car wash dedicated to keeping
+        your vehicle clean, fresh and ready for the road.
+    </p>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+
+    <p>📍 Boksburg, Gauteng</p>
+    <p>📞 071 234 5678</p>
+    <p>🕐 Monday – Saturday: 08:00 – 18:00</p>
+
+    <a class="whatsapp"
+       href="https://wa.me/27712345678">
+       WhatsApp Us
+    </a>
+</section>
+
+<footer>
+    <p>© 2026 GreenLine Auto Care</p>
+</footer>
+
+</body>
+  </html>
