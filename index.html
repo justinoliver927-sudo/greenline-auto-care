@@ -1,211 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>GreenLine Auto Care</title>
+  <title>GreenLine Auto Care | Car Wash & Detailing</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+  <meta name="description"
+        content="GreenLine Auto Care provides professional car washing and detailing in Boksburg, Gauteng.">
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f7f5;
-            color: #172117;
-            line-height: 1.6;
-        }
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        header {
-            background: #123d25;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        header h1 {
-            font-size: 28px;
-        }
+    body {
+      font-family: Arial, sans-serif;
+      background: #07120c;
+      color: white;
+      line-height: 1.6;
+    }
 
-        nav {
-            margin-top: 10px;
-        }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(5, 15, 10, 0.95);
+      border-bottom: 1px solid #1d4d2d;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 8px;
-            font-size: 14px;
-        }
+    nav {
+      max-width: 1100px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-        .hero {
-            background: #1f6b3a;
-            color: white;
-            text-align: center;
-            padding: 70px 20px;
-        }
+    .logo {
+      font-size: 21px;
+      font-weight: bold;
+      color: #55e879;
+    }
 
-        .hero h2 {
-            font-size: 38px;
-            margin-bottom: 10px;
-        }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+      font-size: 14px;
+    }
 
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 25px;
-        }
+    nav a:hover {
+      color: #55e879;
+    }
 
-        .button {
-            display: inline-block;
-            background: white;
-            color: #176333;
-            padding: 13px 22px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      padding: 60px 20px;
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 20, 10, 0.9)),
+        url("https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1600&q=80")
+        center/cover;
+    }
 
-        section {
-            padding: 45px 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
+    .hero-content {
+      max-width: 750px;
+      margin: auto;
+    }
 
-        section h2 {
-            text-align: center;
-            margin-bottom: 25px;
-            color: #14552e;
-        }
+    .hero h1 {
+      font-size: clamp(40px, 9vw, 72px);
+      margin-bottom: 15px;
+    }
 
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 18px;
-        }
+    .hero h1 span {
+      color: #55e879;
+    }
 
-        .service {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-            text-align: center;
-        }
+    .hero p {
+      font-size: 19px;
+      color: #ddd;
+      margin-bottom: 30px;
+    }
 
-        .service h3 {
-            margin-bottom: 8px;
-        }
+    .button {
+      display: inline-block;
+      padding: 14px 24px;
+      margin: 5px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-        .price {
-            color: #1f6b3a;
-            font-size: 22px;
-            font-weight: bold;
-        }
+    .primary {
+      background: #35c759;
+      color: #041008;
+    }
 
-        .contact {
-            text-align: center;
-            background: #e5f0e7;
-        }
+    .secondary {
+      border: 1px solid #55e879;
+      color: white;
+    }
 
-        .whatsapp {
-            display: inline-block;
-            margin-top: 15px;
-            background: #25D366;
-            color: white;
-            padding: 14px 25px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 20px;
+    }
 
-        footer {
-            background: #123d25;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      font-size: 34px;
+      color: #55e879;
+    }
+
+    .section-title p {
+      color: #aaa;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #0d2115;
+      border: 1px solid #1d4d2d;
+      border-radius: 16px;
+      padding: 25px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: #55e879;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 28px;
+      font-weight: bold;
+      color: #55e879;
+      margin: 15px 0;
+    }
+
+    .about {
+      text-align: center;
+      max-width: 750px;
+    }
+
+    .about p {
+      color: #ccc;
+      font-size: 17px;
+    }
+
+    .contact {
+      text-align: center;
+      background: #0d2115;
+      border-radius: 20px;
+    }
+
+    .contact p {
+      margin: 10px;
+      color: #ccc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: #040a06;
+      color: #888;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav a {
+        margin: 0 6px;
+      }
+
+      .hero {
+        min-height: 75vh;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-    <h1>GreenLine Auto Care</h1>
+  <nav>
+    <div class="logo">GREENLINE AUTO CARE</div>
 
-    <nav>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <div>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 </header>
 
-<section class="hero">
-    <h2>Clean Car. Fresh Feeling.</h2>
-    <p>Professional car washing and detailing in Boksburg.</p>
+<main>
 
-    <a class="button" href="#contact">Book a Wash</a>
-</section>
+  <section class="hero">
+    <div class="hero-content">
 
-<section id="services">
-    <h2>Our Services</h2>
+      <h1>
+        Make Your Car
+        <span>Shine.</span>
+      </h1>
+
+      <p>
+        Professional car washing and detailing in Boksburg.
+        Clean car. Fresh finish. GreenLine standard.
+      </p>
+
+      <a class="button primary"
+         href="https://wa.me/27712345678">
+        WhatsApp Us
+      </a>
+
+      <a class="button secondary" href="#services">
+        View Services
+      </a>
+
+    </div>
+  </section>
+
+
+  <section id="services">
+
+    <div class="section-title">
+      <h2>Our Services</h2>
+      <p>Quality car care at affordable prices.</p>
+    </div>
 
     <div class="services">
 
-        <div class="service">
-            <h3>Basic Wash</h3>
-            <p>A clean exterior wash for your vehicle.</p>
-            <p class="price">R60</p>
-        </div>
+      <div class="card">
+        <h3>🚗 Basic Wash</h3>
+        <p>A thorough exterior wash to bring back the shine.</p>
+        <div class="price">R60</div>
+      </div>
 
-        <div class="service">
-            <h3>Wash + Vacuum</h3>
-            <p>Exterior wash plus interior vacuum.</p>
-            <p class="price">R100</p>
-        </div>
+      <div class="card">
+        <h3>✨ Wash + Vacuum</h3>
+        <p>Exterior wash plus a clean and fresh interior.</p>
+        <div class="price">R100</div>
+      </div>
 
-        <div class="service">
-            <h3>Full Detail</h3>
-            <p>A complete clean inside and outside.</p>
-            <p class="price">R250</p>
-        </div>
+      <div class="card">
+        <h3>💎 Full Detail</h3>
+        <p>A deeper clean for customers who want the full treatment.</p>
+        <div class="price">R250</div>
+      </div>
 
-        <div class="service">
-            <h3>Tyre Shine</h3>
-            <p>Give your tyres a fresh finished look.</p>
-            <p class="price">R30</p>
-        </div>
+      <div class="card">
+        <h3>🛞 Tyre Shine</h3>
+        <p>Give your tyres a clean, dark and polished finish.</p>
+        <div class="price">R30</div>
+      </div>
 
     </div>
-</section>
 
-<section id="about">
-    <h2>About GreenLine</h2>
+  </section>
 
-    <p style="text-align:center;">
-        GreenLine Auto Care is a local car wash dedicated to keeping
-        your vehicle clean, fresh and ready for the road.
-    </p>
-</section>
 
-<section id="contact" class="contact">
-    <h2>Contact Us</h2>
+  <section id="about">
 
-    <p>📍 Boksburg, Gauteng</p>
-    <p>📞 071 234 5678</p>
-    <p>🕐 Monday – Saturday: 08:00 – 18:00</p>
+    <div class="section-title">
+      <h2>About GreenLine</h2>
+    </div>
 
-    <a class="whatsapp"
-       href="https://wa.me/27712345678">
-       WhatsApp Us
-    </a>
-</section>
+    <div class="about">
+
+      <p>
+        GreenLine Auto Care is a local car wash and detailing business
+        serving customers in Boksburg, Gauteng.
+      </p>
+
+      <br>
+
+      <p>
+        Our goal is simple: provide reliable service, attention to detail
+        and a vehicle you can be proud to drive.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <section id="contact">
+
+    <div class="contact">
+
+      <div class="section-title">
+        <h2>Ready for a Cleaner Car?</h2>
+        <p>Contact GreenLine Auto Care today.</p>
+      </div>
+
+      <p>📍 Boksburg, Gauteng</p>
+      <p>📞 071 234 5678</p>
+      <p>🕐 Monday – Saturday: 08:00 – 18:00</p>
+
+      <br>
+
+      <a class="button primary"
+         href="https://wa.me/27712345678">
+        Book on WhatsApp
+      </a>
+
+    </div>
+
+  </section>
+
+</main>
+
 
 <footer>
-    <p>© 2026 GreenLine Auto Care</p>
+  <p>© 2026 GreenLine Auto Care</p>
+  <p>Professional car care in Boksburg</p>
 </footer>
 
 </body>
-  </html>
+</html>
