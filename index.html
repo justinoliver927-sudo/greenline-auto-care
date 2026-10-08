@@ -425,6 +425,40 @@
   </div>
 
   <div class="contact">
+    <form class="booking" onsubmit="sendBooking(event)">
+
+  <input
+    type="text"
+    id="customerName"
+    placeholder="Your name"
+    required
+  >
+
+  <input
+    type="tel"
+    id="customerPhone"
+    placeholder="Your phone number"
+    required
+  >
+
+  <select id="service" required>
+    <option value="">Choose a service</option>
+    <option>Basic Wash - R60</option>
+    <option>Wash + Vacuum - R100</option>
+    <option>Full Detail - R250</option>
+    <option>Tyre Shine - R30</option>
+  </select>
+
+  <textarea
+    id="message"
+    placeholder="Anything else we should know?"
+  ></textarea>
+
+  <button class="button primary" type="submit">
+    Send Booking Request
+  </button>
+
+    </form>
 
     <p>📍 Boksburg, Gauteng</p>
     <p>📞 071 234 5678</p>
@@ -452,6 +486,26 @@
   <p>© 2026 GreenLine Auto Care</p>
   <p>Professional car care in Boksburg</p>
 </footer>
+<script>
+function sendBooking(event) {
 
+  event.preventDefault();
+
+  const name = document.getElementById("customerName").value;
+  const phone = document.getElementById("customerPhone").value;
+  const service = document.getElementById("service").value;
+  const message = document.getElementById("message").value;
+
+  const text =
+    "Hello GreenLine Auto Care!%0A%0A" +
+    "Name: " + encodeURIComponent(name) + "%0A" +
+    "Phone: " + encodeURIComponent(phone) + "%0A" +
+    "Service: " + encodeURIComponent(service) + "%0A" +
+    "Message: " + encodeURIComponent(message);
+
+  window.location.href =
+    "https://wa.me/27712345678?text=" + text;
+}
+</script>
 </body>
 </html>
